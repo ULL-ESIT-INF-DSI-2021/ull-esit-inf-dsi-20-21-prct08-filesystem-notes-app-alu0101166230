@@ -1,13 +1,12 @@
-name: Coveralls GitHub Action
+
+
+name: Coveralls
 
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-
-
 
 jobs:
   coveralls:
@@ -28,4 +27,4 @@ jobs:
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@master
       with:
-        github-token: ${{ secret.GITHUB_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
