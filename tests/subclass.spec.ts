@@ -11,6 +11,9 @@ describe('subclass test', () => {
     expect(subclass.map(Math.sqrt)).to.deep.equal([3, 2, 9]);
   });
   it('must  be a template class', () =>{
-    expect(subclass.map(Math.sqrt)).to.deep.equal([3, 2, 9]);
+    expect(subclass instanceof Template).to.be.true;
+  });
+  it('must  implement the reduce method', () =>{
+    expect(subclass instanceof Template).to.be.true;
   });
 });

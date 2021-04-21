@@ -1,5 +1,14 @@
+/**
+ * Template that allow to map a number list and reduce function
+ */
 export abstract class Template {
   constructor(protected list:number[]) {}
+
+  /**
+   *
+   * @param inputFunction function to be apply to the number list
+   * @returns a number list resulting of appliying the inputFunction
+   */
 
   map(inputFunction: (a:number)=> number):number[] {
     const outputList: number[] = [];
@@ -9,7 +18,17 @@ export abstract class Template {
     return outputList;
   }
 
-  abstract reduce(numberList:number[]):number;
+  /**
+   * reduce fucntion to be implemented be the subclasses
+   *
+   */
+  abstract reduce():number[];
+
+  hook1() {}
+
+  hook2() {}
+
+  hook3() {}
 }
 
 // const temp = new Template([4, 9, 81]);

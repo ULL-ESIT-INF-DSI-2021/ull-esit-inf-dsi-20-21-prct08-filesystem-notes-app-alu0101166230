@@ -13,7 +13,11 @@ export class Subclass extends Template {
     return outputList;
   }
 
-  reduce(numberList:number[]):number {
-    return 8;
-  };
+  reduce():number[] {
+    return this.map(Math.sqrt);
+  }
+
+  addMapReduce(funtionToApply:(a:number[]) => number):number {
+    return 0;
+  }
 }
