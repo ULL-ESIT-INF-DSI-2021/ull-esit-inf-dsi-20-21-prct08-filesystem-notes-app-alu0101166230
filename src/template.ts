@@ -2,7 +2,7 @@
  * Template that allow to map a number list and reduce function
  */
 export abstract class Template {
-  constructor(protected list:number[]) {}
+  constructor(protected list:number[], protected applyFuntion: (a:number) => number ) {}
 
   /**
    *
@@ -10,10 +10,11 @@ export abstract class Template {
    * @returns a number list resulting of appliying the inputFunction
    */
 
-  map(inputFunction: (a:number)=> number):number[] {
+   
+  map():number[] {
     const outputList: number[] = [];
     this.list.forEach((element) => {
-      outputList.push(inputFunction(element));
+      outputList.push(this.applyFuntion(element));
     });
     return outputList;
   }
@@ -22,17 +23,11 @@ export abstract class Template {
    * reduce fucntion to be implemented be the subclasses
    *
    */
-  abstract reduce():number[];
-
-  hook1() {}
-
-  hook2() {}
-
-  hook3() {}
+    abstract reduce():number
 }
 
-// const temp = new Template([4, 9, 81]);
+// const temp = new Template([4, 9, 81], Math.sqrt);
 
-// console.log(temp.map(Math.sqrt));
+// console.log(temp.map());
 
 
