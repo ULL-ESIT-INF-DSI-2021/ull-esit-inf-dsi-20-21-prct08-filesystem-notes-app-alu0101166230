@@ -4,10 +4,9 @@ name: Coveralls
 
 on:
   push:
-    branches:
-      - '*'
+    branches: [ main ]
   pull_request:
-      - '*'
+    branches: [ main ]
 
 jobs:
   coveralls:
