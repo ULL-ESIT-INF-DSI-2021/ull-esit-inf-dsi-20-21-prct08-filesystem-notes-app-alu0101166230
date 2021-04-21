@@ -2,9 +2,9 @@
 import {Template} from './template';
 
 /**
- * Implemented the reduce method adding the list
+ * Implemented the reduce method substracting the list
  */
-export class AddMapReduce extends Template {
+export class SubMapReduce extends Template {
   constructor(protected list:number[], protected applyFuntion: (a:number) => number) {
     super(list, applyFuntion);
   }
@@ -14,7 +14,7 @@ export class AddMapReduce extends Template {
     const mapList:number[] = this.map();
     let output: number = 0;
     mapList.forEach((element) => {
-      output += element;
+      output -= element;
     });
     return output;
   }

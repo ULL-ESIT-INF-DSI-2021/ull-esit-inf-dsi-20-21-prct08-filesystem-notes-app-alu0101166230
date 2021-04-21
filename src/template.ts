@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /**
  * Template that allow to map a number list and reduce function
  */
@@ -10,12 +11,18 @@ export abstract class Template {
    * @returns a number list resulting of appliying the inputFunction
    */
 
-   
+  run() {
+    this.map();
+    this.reduce();
+  }
+
+
   map():number[] {
     const outputList: number[] = [];
     this.list.forEach((element) => {
       outputList.push(this.applyFuntion(element));
     });
+    this.list = outputList;
     return outputList;
   }
 
@@ -24,6 +31,9 @@ export abstract class Template {
    *
    */
     abstract reduce():number
+
+    hook1(){}
+    hook2(){}
 }
 
 // const temp = new Template([4, 9, 81], Math.sqrt);

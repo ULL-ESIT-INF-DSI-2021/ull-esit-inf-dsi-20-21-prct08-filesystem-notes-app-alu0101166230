@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Template | modification</title>
+	<title>SubMapReduce | modification</title>
 	<meta name="description" content="Documentation for modification">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">modification</a>
 				</li>
 				<li>
-					<a href="../modules/template.html">template</a>
+					<a href="../modules/submapreduce.html">submapreduce</a>
 				</li>
 				<li>
-					<a href="template.template-1.html">Template</a>
+					<a href="submapreduce.submapreduce-1.html">SubMapReduce</a>
 				</li>
 			</ul>
-			<h1>Class Template</h1>
+			<h1>Class SubMapReduce</h1>
 		</div>
 	</div>
 </header>
@@ -71,7 +71,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Template that allow to map a number list and reduce function</p>
+						<p>Implemented the reduce method substracting the list</p>
 					</div>
 				</div>
 			</section>
@@ -79,13 +79,10 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Template</span>
+						<a href="template.template-1.html" class="tsd-signature-type" data-tsd-kind="Class">Template</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<a href="addmapreduce.addmapreduce-1.html" class="tsd-signature-type" data-tsd-kind="Class">AddMapReduce</a>
-							</li>
-							<li>
-								<a href="submapreduce.submapreduce-1.html" class="tsd-signature-type" data-tsd-kind="Class">SubMapReduce</a>
+								<span class="target">SubMapReduce</span>
 							</li>
 						</ul>
 					</li>
@@ -98,22 +95,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="template.template-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="submapreduce.submapreduce-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-private-protected">
+						<section class="tsd-index-section tsd-is-inherited tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="template.template-1.html#applyfuntion" class="tsd-kind-icon">apply<wbr>Funtion</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="template.template-1.html#list" class="tsd-kind-icon">list</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="submapreduce.submapreduce-1.html#applyfuntion" class="tsd-kind-icon">apply<wbr>Funtion</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected"><a href="submapreduce.submapreduce-1.html#list" class="tsd-kind-icon">list</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="template.template-1.html#map" class="tsd-kind-icon">map</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="template.template-1.html#reduce" class="tsd-kind-icon">reduce</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="template.template-1.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="submapreduce.submapreduce-1.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="submapreduce.submapreduce-1.html#reduce" class="tsd-kind-icon">reduce</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="submapreduce.submapreduce-1.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
@@ -121,17 +118,18 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Template<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, applyFuntion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="template.template-1.html" class="tsd-signature-type" data-tsd-kind="Class">Template</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Sub<wbr>Map<wbr>Reduce<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span>, applyFuntion<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="submapreduce.submapreduce-1.html" class="tsd-signature-type" data-tsd-kind="Class">SubMapReduce</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/alu0101166230/DSI-modification/blob/29e4145/src/template.ts#L5">template.ts:5</a></li>
+									<li>Defined in submapreduce.ts:7</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -161,18 +159,19 @@
 									</ul>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="template.template-1.html" class="tsd-signature-type" data-tsd-kind="Class">Template</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="submapreduce.submapreduce-1.html" class="tsd-signature-type" data-tsd-kind="Class">SubMapReduce</a></h4>
 						</li>
 					</ul>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited tsd-is-private-protected">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="applyfuntion" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> apply<wbr>Funtion</h3>
 					<div class="tsd-signature tsd-kind-icon">apply<wbr>Funtion<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#applyfuntion">applyFuntion</a></p>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -196,25 +195,27 @@
 						</ul>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="list" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> list</h3>
 					<div class="tsd-signature tsd-kind-icon">list<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#list">list</a></p>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="map" class="tsd-anchor"></a>
 					<h3>map</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#map">map</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/alu0101166230/DSI-modification/blob/29e4145/src/template.ts#L20">template.ts:20</a></li>
 								</ul>
@@ -223,37 +224,34 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 					<a name="reduce" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> reduce</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<h3>reduce</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 						<li class="tsd-signature tsd-kind-icon">reduce<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Overrides <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#reduce">reduce</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/alu0101166230/DSI-modification/blob/29e4145/src/template.ts#L33">template.ts:33</a></li>
+									<li>Defined in submapreduce.ts:13</li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>reduce fucntion to be implemented be the subclasses</p>
-								</div>
-							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 					<a name="run" class="tsd-anchor"></a>
 					<h3>run</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
+								<p>Inherited from <a href="template.template-1.html">Template</a>.<a href="template.template-1.html#run">run</a></p>
 								<ul>
 									<li>Defined in <a href="https://github.com/alu0101166230/DSI-modification/blob/29e4145/src/template.ts#L14">template.ts:14</a></li>
 								</ul>
@@ -277,10 +275,10 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/index.html">index</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/submapreduce.html">submapreduce</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/template.html">template</a>
 					</li>
 				</ul>
@@ -290,25 +288,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="template.template-1.html" class="tsd-kind-icon">Template</a>
+						<a href="submapreduce.submapreduce-1.html" class="tsd-kind-icon">Sub<wbr>Map<wbr>Reduce</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="template.template-1.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="submapreduce.submapreduce-1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="template.template-1.html#applyfuntion" class="tsd-kind-icon">apply<wbr>Funtion</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="submapreduce.submapreduce-1.html#applyfuntion" class="tsd-kind-icon">apply<wbr>Funtion</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
-								<a href="template.template-1.html#list" class="tsd-kind-icon">list</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
+								<a href="submapreduce.submapreduce-1.html#list" class="tsd-kind-icon">list</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="template.template-1.html#map" class="tsd-kind-icon">map</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="submapreduce.submapreduce-1.html#map" class="tsd-kind-icon">map</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="template.template-1.html#reduce" class="tsd-kind-icon">reduce</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="submapreduce.submapreduce-1.html#reduce" class="tsd-kind-icon">reduce</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="template.template-1.html#run" class="tsd-kind-icon">run</a>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="submapreduce.submapreduce-1.html#run" class="tsd-kind-icon">run</a>
 							</li>
 						</ul>
 					</li>
@@ -329,7 +327,7 @@
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 			</ul>
 		</div>
 	</div>
