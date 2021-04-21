@@ -4,10 +4,12 @@ import {expect} from 'chai';
 import {Template} from '../src/template';
 import {AddMapReduce} from '../src/addmapreduce';
 import {SubMapReduce} from '../src/submapreduce';
+import {ProductMapReduce} from '../src/productMapReduce';
 
 const addingReduceSubclass = new AddMapReduce([9, 4, 81], Math.sqrt);
 const addingReduceSubclass1 = new AddMapReduce([9, 4, 81], Math.sqrt);
 const sub = new SubMapReduce([9, 4, 81], Math.sqrt);
+const product = new ProductMapReduce([9, 4, 81], Math.sqrt);
 
 
 describe('addingReduceSubclass test', () => {
@@ -33,5 +35,11 @@ describe('addingReduceSubclass test', () => {
 describe('SUB MAP REDUCE test', () => {
   it('SUB MAP REDUCE  must  have addingReduceFunction', () =>{
     expect(sub.reduce()).to.be.equal(-14);
+  });
+});
+
+describe('Product MAP REDUCE test', () => {
+  it('Product MAP REDUCE  must  have addingReduceFunction', () =>{
+    expect(product.reduce()).to.be.equal(54);
   });
 });

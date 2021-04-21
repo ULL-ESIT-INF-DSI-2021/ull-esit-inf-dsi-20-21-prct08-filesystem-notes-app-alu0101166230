@@ -32,8 +32,8 @@ export abstract class Template {
    */
     abstract reduce():number
 
-    hook1(){}
-    hook2(){}
+    hook1() {}
+    hook2() {}
 }
 
 // const temp = new Template([4, 9, 81], Math.sqrt);
