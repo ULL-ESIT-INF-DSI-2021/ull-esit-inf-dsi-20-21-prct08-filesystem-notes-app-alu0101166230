@@ -1,7 +1,7 @@
 const {help} = require('yargs');
 const yargs = require('yargs');
 const argv = require('yargs/yargs')(process.argv.slice(2));
-import {createNote, removeNote} from './index';
+import {createNote, removeNote} from './note';
 
 interface Arguments {
   title: string,

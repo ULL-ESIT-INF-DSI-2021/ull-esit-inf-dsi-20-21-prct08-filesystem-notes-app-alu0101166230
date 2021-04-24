@@ -15,7 +15,6 @@
 // console.log(chalk `{${color} asdasd}`);
 
 
-
 const chalk = require('chalk');
 import {writeFile, readFile, unlink, appendFile, readdir} from 'fs';
 import {read} from 'node:fs';
@@ -83,18 +82,22 @@ const note5 = {
 //   console.log('File helloworld.txt has just been created');
 // });
 
-export function createNote(note: string, content: string): void {
+export function createNote(note: string, content: string): number {
+  let returningValue: number = 0;
   readFile(note, (err, data)=>{
     if (err) {
       writeFile(note, content, (error) => {
         if (error) {
-          console.log('error in weite funciotn');
+          console.log('error writing  the note');
         }
       });
+      returningValue = 0;
     } else {
+      returningValue -1;
       console.log('error, already existend file');
     }
   });
+  return returningValue;
 }
 
 function readNote(titleNote: string) {
@@ -112,7 +115,7 @@ export function removeNote(titleNote: string) {
     if (err) {
       console.log('error file does not exist');
     } else {
-       unlink(titleNote, (err) => {
+      unlink(titleNote, (err) => {
         if (err) throw err;
         console.log(`${titleNote} was deleted`);
       });
@@ -150,7 +153,6 @@ export function removeNote(titleNote: string) {
 //   }
 // });
 
- //createFile(note1.title + '.txt', jsonstring);
-
+// createFile(note1.title + '.txt', jsonstring);
 
 
