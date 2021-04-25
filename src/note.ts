@@ -19,7 +19,7 @@ export function addNote(userName: string, titleNote: string, bodyNote:string, co
   const fullUserDirectoryPath = NOTES_STORAGE_DIRECTORY + userName;
   if (fs.existsSync(fullNotePath) ) {
     console.log(chalk.red`Error, note already exist`);
-    return -1
+    return -1;
   } else {
     const note: Note = {
       user: userName,
@@ -32,16 +32,15 @@ export function addNote(userName: string, titleNote: string, bodyNote:string, co
     }
     fs.writeFileSync(fullNotePath, JSON.stringify(note, null, 2));
     console.log(chalk.green`Note Created!`);
-    return 0
+    return 0;
   }
-  
 }
 
 export function modifyNote(userName: string, titleNote: string, bodyNote:string, color:string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   if (!fs.existsSync(fullNotePath) ) {
     console.log(chalk.red`Error, note does not exist`);
-    return -1
+    return -1;
   } else {
     const note: Note = {
       user: userName,
@@ -51,7 +50,7 @@ export function modifyNote(userName: string, titleNote: string, bodyNote:string,
     };
     fs.writeFileSync(fullNotePath, JSON.stringify(note, null, 2));
     console.log(chalk.green`Note Modified!`);
-    return 0
+    return 0;
   }
 }
 
@@ -59,11 +58,11 @@ export function removeNote(userName: string, titleNote: string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   if (!fs.existsSync(fullNotePath) ) {
     console.log(chalk.red`Error, note does not exist`);
-    return -1
+    return -1;
   } else {
     fs.unlinkSync(fullNotePath);
     console.log(chalk.green`Note removed!`);
-    return 0
+    return 0;
   }
 }
 
@@ -73,7 +72,7 @@ export function listNotes(userName:string):number {
 
   if (!fs.existsSync(fullUserDirectoryPath)) {
     console.log(chalk.red`You dont have any notes :(`);
-    return -1
+    return -1;
   } else {
     const noteTitles: string[] = fs.readdirSync(fullUserDirectoryPath);
     noteTitles.forEach((noteTitle) => {
