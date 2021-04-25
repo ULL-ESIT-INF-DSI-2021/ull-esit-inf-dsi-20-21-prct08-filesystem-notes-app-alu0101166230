@@ -54,7 +54,7 @@ Los objetivos de este informe son:
     - SonarCloud
     - Coverall
 
-9. Utilizar los paquetes yargs y chalk
+9. Utilizar los paquetes yargs y chalk.
 
 [Github Pape](https://ull-esit-inf-dsi-2021.github.io/ull-esit-inf-dsi-20-21-prct08-filesystem-notes-app-alu0101166230/)
 
