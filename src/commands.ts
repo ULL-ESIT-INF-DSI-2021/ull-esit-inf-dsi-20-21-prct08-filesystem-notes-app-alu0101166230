@@ -33,6 +33,29 @@ yargs.command({
 help();
 
 yargs.command({
+  command: 'modify',
+  describe: 'Modify an existend note',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string',
+    },
+    body: {
+      describe: 'Note description',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+  //handler: (argv:Arguments) => removeNote(argv.title),
+});
+
+yargs.command({
   command: 'remove',
   describe: 'Remove an existend note',
   builder: {
@@ -50,4 +73,35 @@ yargs.command({
   handler: (argv:Arguments) => removeNote(argv.title),
 });
 
+yargs.command({
+  command: 'remove',
+  describe: 'Remove an existend note',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+  //handler: (argv:Arguments) => removeNote(argv.title),
+});
+
+
+yargs.command({
+  command: 'read',
+  describe: 'Read an existend note',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+  //handler: (argv:Arguments) => removeNote(argv.title),
+});
 yargs.parse();
