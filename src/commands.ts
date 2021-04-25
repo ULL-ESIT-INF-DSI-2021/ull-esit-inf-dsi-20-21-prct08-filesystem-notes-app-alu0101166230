@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-const chalk = require('chalk')
+const chalk = require('chalk');
 import * as yargs from 'yargs';
 import {help} from 'yargs';
 import * as note from './note';
@@ -59,7 +59,7 @@ yargs.command({
       type: 'string',
     },
   },
-   handler: (argv:Arguments) => note.(argv.user, argv.title, argv.body, argv.color),
+  handler: (argv:Arguments) => note.modifyNote(argv.user, argv.title, argv.body, argv.color),
 });
 
 yargs.command({
@@ -77,38 +77,27 @@ yargs.command({
       type: 'string',
     },
   },
-   handler: (argv:Arguments) => note.removeNote(argv.user, argv.title),
+  handler: (argv:Arguments) => note.removeNote(argv.user, argv.title),
 });
 
-// yargs.command({
-//   command: 'remove',
-//   describe: 'Remove an existend note',
-//   builder: {
-//     user: {
-//       describe: 'Note Owner',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//   },
-//   // handler: (argv:Arguments) => removeNote(argv.title),
-// });
+
+yargs.command({
+  command: 'read',
+  describe: 'Read an existend note',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+  handler: (argv:Arguments) => note.readNote(argv.user, argv.title),
+});
 
 
-// yargs.command({
-//   command: 'read',
-//   describe: 'Read an existend note',
-//   builder: {
-//     user: {
-//       describe: 'Note Owner',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//     title: {
-//       describe: 'Note title',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//   },
-//    //handler: (argv:Arguments) => addNote
-// });
 yargs.parse();
