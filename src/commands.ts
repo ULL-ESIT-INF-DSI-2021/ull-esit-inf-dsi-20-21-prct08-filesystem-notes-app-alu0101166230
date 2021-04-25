@@ -1,7 +1,11 @@
+/* eslint-disable max-len */
+
 const {help} = require('yargs');
 const yargs = require('yargs');
 const argv = require('yargs/yargs')(process.argv.slice(2));
-import {createNote, removeNote} from './note';
+
+
+const NOTES_STORAGE_DIRECTOY: string = './notes-storage';
 
 interface Arguments {
   title: string,
@@ -28,7 +32,7 @@ yargs.command({
       type: 'string',
     },
   },
-  handler: (argv:Arguments) => createNote(argv.title, argv.body),
+  //handler: (argv:Arguments) => writeFileSync(NOTES_STORAGE_DIRECTOY + argv.title, argv.body),
 });
 help();
 
@@ -52,7 +56,7 @@ yargs.command({
       type: 'string',
     },
   },
-  //handler: (argv:Arguments) => removeNote(argv.title),
+  // handler: (argv:Arguments) => removeNote(argv.title),
 });
 
 yargs.command({
@@ -70,7 +74,7 @@ yargs.command({
       type: 'string',
     },
   },
-  handler: (argv:Arguments) => removeNote(argv.title),
+  // handler: (argv:Arguments) => removeNote(argv.title),
 });
 
 yargs.command({
@@ -83,7 +87,7 @@ yargs.command({
       type: 'string',
     },
   },
-  //handler: (argv:Arguments) => removeNote(argv.title),
+  // handler: (argv:Arguments) => removeNote(argv.title),
 });
 
 
@@ -102,6 +106,6 @@ yargs.command({
       type: 'string',
     },
   },
-  //handler: (argv:Arguments) => removeNote(argv.title),
+  // handler: (argv:Arguments) => removeNote(argv.title),
 });
 yargs.parse();
