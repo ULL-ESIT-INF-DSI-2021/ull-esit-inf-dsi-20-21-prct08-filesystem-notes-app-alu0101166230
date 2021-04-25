@@ -1,15 +1,13 @@
 /* eslint-disable max-len */
-
-const {help} = require('yargs');
-const yargs = require('yargs');
-const argv = require('yargs/yargs')(process.argv.slice(2));
-
-
-const NOTES_STORAGE_DIRECTOY: string = './notes-storage';
-
+const chalk = require('chalk')
+import * as yargs from 'yargs';
+import {help} from 'yargs';
+import * as note from './note';
 interface Arguments {
+  user: string,
   title: string,
   body: string
+  color: string
 }
 
 yargs.command({
@@ -31,33 +29,38 @@ yargs.command({
       demandOption: true,
       type: 'string',
     },
+    color: {
+      describe: 'Note color',
+      demandOption: true,
+      type: 'string',
+    },
   },
-  //handler: (argv:Arguments) => writeFileSync(NOTES_STORAGE_DIRECTOY + argv.title, argv.body),
+  handler: (argv:Arguments) => note.addNote(argv.user, argv.title, argv.body, argv.color),
 });
 help();
 
-yargs.command({
-  command: 'modify',
-  describe: 'Modify an existend note',
-  builder: {
-    user: {
-      describe: 'Note Owner',
-      demandOption: true,
-      type: 'string',
-    },
-    title: {
-      describe: 'Note title',
-      demandOption: true,
-      type: 'string',
-    },
-    body: {
-      describe: 'Note description',
-      demandOption: true,
-      type: 'string',
-    },
-  },
-  // handler: (argv:Arguments) => removeNote(argv.title),
-});
+// yargs.command({
+//   command: 'modify',
+//   describe: 'Modify an existend note',
+//   builder: {
+//     user: {
+//       describe: 'Note Owner',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//     title: {
+//       describe: 'Note title',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//     body: {
+//       describe: 'Note description',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//   },
+//   // handler: (argv:Arguments) => removeNote(argv.title),
+// });
 
 yargs.command({
   command: 'remove',
@@ -74,38 +77,38 @@ yargs.command({
       type: 'string',
     },
   },
-  // handler: (argv:Arguments) => removeNote(argv.title),
+   handler: (argv:Arguments) => note.removeNote(argv.user, argv.title),
 });
 
-yargs.command({
-  command: 'remove',
-  describe: 'Remove an existend note',
-  builder: {
-    user: {
-      describe: 'Note Owner',
-      demandOption: true,
-      type: 'string',
-    },
-  },
-  // handler: (argv:Arguments) => removeNote(argv.title),
-});
+// yargs.command({
+//   command: 'remove',
+//   describe: 'Remove an existend note',
+//   builder: {
+//     user: {
+//       describe: 'Note Owner',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//   },
+//   // handler: (argv:Arguments) => removeNote(argv.title),
+// });
 
 
-yargs.command({
-  command: 'read',
-  describe: 'Read an existend note',
-  builder: {
-    user: {
-      describe: 'Note Owner',
-      demandOption: true,
-      type: 'string',
-    },
-    title: {
-      describe: 'Note title',
-      demandOption: true,
-      type: 'string',
-    },
-  },
-  // handler: (argv:Arguments) => removeNote(argv.title),
-});
+// yargs.command({
+//   command: 'read',
+//   describe: 'Read an existend note',
+//   builder: {
+//     user: {
+//       describe: 'Note Owner',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//     title: {
+//       describe: 'Note title',
+//       demandOption: true,
+//       type: 'string',
+//     },
+//   },
+//    //handler: (argv:Arguments) => addNote
+// });
 yargs.parse();
