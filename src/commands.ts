@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-const chalk = require('chalk');
 import * as yargs from 'yargs';
 import {help} from 'yargs';
 import * as note from './note';
