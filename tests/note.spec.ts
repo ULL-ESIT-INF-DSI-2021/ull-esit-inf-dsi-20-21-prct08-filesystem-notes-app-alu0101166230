@@ -45,8 +45,8 @@ describe('testing listNote .. ', () => {
 
 describe('testing readNote .. ', () => {
   it(' must Read a given users note', () => {
-    note.addNote('Leonardo', 'note1', 'this is my note', 'blue');
-    expect(note.readNote('Leonardo', 'note1')).to.be.equal(0);
+    note.addNote('Leonardo', 'note2', 'this is my note', 'blue');
+    expect(note.readNote('Leonardo', 'note2')).to.be.equal(0);
   });
   it(' must show error when the note does not exist', () => {
     expect(note.readNote('UnexistendUser', 'note')).to.be.equal(-1);

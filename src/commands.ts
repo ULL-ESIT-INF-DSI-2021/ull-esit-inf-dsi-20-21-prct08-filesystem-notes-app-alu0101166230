@@ -9,6 +9,7 @@ interface Arguments {
   color: string
 }
 
+
 yargs.command({
   command: 'add',
   describe: 'Add a new note',

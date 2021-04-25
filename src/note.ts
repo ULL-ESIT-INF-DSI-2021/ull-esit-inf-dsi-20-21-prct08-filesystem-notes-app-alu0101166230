@@ -5,6 +5,9 @@ import {Console} from 'node:console';
 import {stdout} from 'node:process';
 import {log} from 'node:util';
 
+/**
+ * file to store the notes
+ */
 const NOTES_STORAGE_DIRECTORY: string = './notes-storage/';
 
 type Note = {
@@ -14,6 +17,14 @@ type Note = {
   color: string
 }
 
+/**
+ * Add a note to a user list
+ * @param userName User account
+ * @param titleNote Titlte of the note
+ * @param bodyNote note content
+ * @param color color of choice to display the title
+ * @returns 0 if the note is created succesfully, -1 is not
+ */
 export function addNote(userName: string, titleNote: string, bodyNote:string, color:string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   const fullUserDirectoryPath = NOTES_STORAGE_DIRECTORY + userName;
@@ -36,6 +47,14 @@ export function addNote(userName: string, titleNote: string, bodyNote:string, co
   }
 }
 
+/**
+ * Modify an existend note
+ * @param userName User account
+ * @param titleNote Titlte of the note
+ * @param bodyNote note content
+ * @param color color of choice to display the title
+ * @returns 0 if the note is modify succesfully, -1 is not
+ */
 export function modifyNote(userName: string, titleNote: string, bodyNote:string, color:string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   if (!fs.existsSync(fullNotePath) ) {
@@ -54,6 +73,12 @@ export function modifyNote(userName: string, titleNote: string, bodyNote:string,
   }
 }
 
+/**
+ * remove an existend note
+ * @param userName User account
+ * @param titleNote The title og the note
+ * @returns 0 if the note is remove succesfully, -1 is not
+ */
 export function removeNote(userName: string, titleNote: string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   if (!fs.existsSync(fullNotePath) ) {
@@ -66,6 +91,11 @@ export function removeNote(userName: string, titleNote: string):number {
   }
 }
 
+/**
+ * List all the existend notes
+ * @param userName User account
+ * @returns 0 if its succesfully, -1 is not
+ */
 export function listNotes(userName:string):number {
   const fullUserDirectoryPath:string = NOTES_STORAGE_DIRECTORY + userName;
   let fullNotePath:string = '';
@@ -85,6 +115,12 @@ export function listNotes(userName:string):number {
   return 0;
 }
 
+/**
+ * read an existend note
+ * @param userName User account
+ * @param titleNote Note Title
+ * @returns 0 if the note is readed succesfully, -1 is not
+ */
 export function readNote(userName:String, titleNote:string):number {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
 
