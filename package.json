@@ -2,11 +2,11 @@
   "name": "index",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha",
     "coverage": "nyc npm test && nyc report --reporter=lcov",
-    "start": "tsc-watch --onSuccess \"node dist/note.js\"",
+    "start": "tsc-watch --onSuccess \"node dist/app.js\"",
     "doc": "typedoc"
   },
   "keywords": [],

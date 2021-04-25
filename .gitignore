@@ -1,5 +1,4 @@
-coverage
-.nyc_output
+coverag
 node_modules
 dist
 package-lock.json
