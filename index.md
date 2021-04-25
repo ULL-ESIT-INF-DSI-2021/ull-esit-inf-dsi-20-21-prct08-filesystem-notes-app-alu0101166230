@@ -11,7 +11,7 @@
 
 ## Introducción
 
-Mediante el [Enunciado de la Práctica](https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/), se pretende realizar tendrá que implementar una aplicación de procesamiento de notas de texto. La cual permitirá realizar las siguientes acciones para las notas de un usuario concreto:
+Mediante el [Enunciado de la Práctica](https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/), se pretende realizar una aplicación de procesamiento de notas de texto. La cual permitirá realizar las siguientes acciones para las notas de un usuario concreto:
 
 - Añadir 
 - Modificar
@@ -27,7 +27,7 @@ Los objetivos de este informe son:
 
 1. Relizar dicha aplicación, con las interaciones ya mencionadas
 
-2. Utilzar para ello Node.js, en concreto, la API síncrona proporcionada por Node.js para trabajar con el sistema de ficheros.
+2. Utilzar para ello Node.js, en concreto, la API síncrona proporcionada por Node.js para trabajar con el sistema de ficheros. Además del uso de yargs.js y chalk.js
 
 3. Dar a conocer la implementación de esta aplicación
 
@@ -67,29 +67,123 @@ Para cada ejercicio:
 
 8. Se generó este informe
 
-## Planificación
-
 
 ### Implementación.
 
+1. **Add note**
+
+Para añadir una nota, se ejecuta el comando
+
+```ts
+ 
+add --user Leonardo --title MyNote --body thisIsMyContent --color red
+
+```
+Si existe, esta es la salida
+
+ Se crea una carpeta con el usuario y la nota dentro
+ ![test](img/Screenshot%20from%202021-04-25%2022-38-07.png)
+
+ ![test](img/Screenshot%20from%202021-04-25%2022-53-17.png)
+
+Si ya existe, muestra un mensaje de error
+
+2. **Modify Note**
+
+Se ejecuta de la siguiente manera
+
+```ts
+ modify --user Leonardo --title MyNote --body changing --color yellow
+
+```
+
+Si Existe la note:
+
+ ![test](img/Screenshot%20from%202021-04-25%2022-42-27.png)
+
+Efectivamente se cambia
+  ![test](img/Screenshot%20from%202021-04-25%2022-42-44.png)
+
+Si no existe
+
+![test](img/Screenshot%20from%202021-04-25%2022-42-59.png)
+
+3. **Remove Note**
+
+![test](img/Screenshot%20from%202021-04-25%2022-43-28.png)
+
+Efectivamente borra el fichero
+
+![test](img/Screenshot%20from%202021-04-25%2022-43-36.png)
+
+En caso de que no exista
+
+![test](img/Screenshot%20from%202021-04-25%2022-43-56.png)
+4. **List Notes**
+
+Dado un usuario con notas
+![test](img/Screenshot%20from%202021-04-25%2022-45-35.png)
+
+![test](img/Screenshot%20from%202021-04-25%2022-45-58.png)
+
+Se muestra efectivamente por su `--color`
+
+En caso de que no exista, se muestra el siguiente mensaje
+
+![test](img/Screenshot%20from%202021-04-25%2022-46-25.png)
+
+5. **Read Note**
+
+Ejecución:
+
+![test](img/Screenshot%20from%202021-04-25%2022-47-55.png)
+
+![test](img/Screenshot%20from%202021-04-25%2022-48-03.png)
+
+Podemos ver que efectivamente se muestrael color guardado.
+
+En caso de que no exista, la salida es la siguiente
+![test](img/Screenshot%20from%202021-04-25%2022-48-14.png)
+
+  **Carga y Guarda en formato JSON**
+
+![test](img/Screenshot%20from%202021-04-25%2022-48-36.png)
+
 #### Test implementados
 
-#### Cubrimiento Coverage
+![test](img/test.png)
   
-### Cubrimiento del Código mediante Instanbul
+#### Cubrimiento del Código mediante Instanbul
+![instambul](img/Screenshot%20from%202021-04-25%2022-24-05.png)
 
 ### Github Actions
 
-#### Node.js CI
+#### Node.js 
+![nodeCI](img/ghAction.png)
+
+ 
 
 #### Coveralls
+ ![Coveralls](img/coveralls.png)
 
 #### SonarCloud 
 
+![Sonar](img/sonar.png)
+
 ### Conclusiones
+
+Realizando esta práctica, se pudo realizar la aplicación de procesamiento de notas de texto. La cual permitirá realizar acciones como 
+
+- Añadir 
+- Modificar
+- Eliminar
+- Listar  
+
+Mediante pasing de JSON, asi como tambien las Herramientas de yargs y chalk
 
 ### Problemáticas
 
+La principal problemática encontrada fue la instalación del sonar cloud, asi tambien como el uso de chalk y yarg
 ### Referencias
 
 - [Práctica 8 - Aplicación de procesamiento de notas de texto](https://ull-esit-inf-dsi-2021.github.io/prct08-filesystem-notes-app/)
@@ -99,8 +193,6 @@ Para cada ejercicio:
 - [Typescript Documentación oficial](https://www.typescriptlang.org/)
 - [Istambul](https://istanbul.js.org/)
 - [Github Action](https://github.com/features/actions)
-- [Inquirer.js](https://www.npmjs.com/package/inquirer)
-- [Diagrama de Clases UML](https://es.wikipedia.org/wiki/Diagrama_de_clases)
-- [Github](https://github.com/)
-- [Pull Request](https://styde.net/pull-request-en-github/)
-
+-  [API síncrona proporcionada por Node.js para trabajar con el sistema de ficheros.](https://nodejs.org/dist/latest-v15.x/docs/api/fs.html#fs_synchronous_api)
+-  [Yarg](https://www.npmjs.com/package/yargs)
+-  [Chalk](https://www.npmjs.com/package/chalk)
