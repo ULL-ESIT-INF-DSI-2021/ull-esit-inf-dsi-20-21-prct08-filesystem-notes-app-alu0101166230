@@ -1,6 +1,6 @@
 {
   "user": "Papa",
   "title": "newNote",
-  "body": "NoteBody",
-  "color": "blue"
+  "body": "thisIsMyNewBodyNow",
+  "color": "magenta"
 }

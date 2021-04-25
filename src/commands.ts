@@ -39,28 +39,28 @@ yargs.command({
 });
 help();
 
-// yargs.command({
-//   command: 'modify',
-//   describe: 'Modify an existend note',
-//   builder: {
-//     user: {
-//       describe: 'Note Owner',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//     title: {
-//       describe: 'Note title',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//     body: {
-//       describe: 'Note description',
-//       demandOption: true,
-//       type: 'string',
-//     },
-//   },
-//   // handler: (argv:Arguments) => removeNote(argv.title),
-// });
+yargs.command({
+  command: 'modify',
+  describe: 'Modify an existend note',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+    title: {
+      describe: 'Note title',
+      demandOption: true,
+      type: 'string',
+    },
+    body: {
+      describe: 'Note description',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+   handler: (argv:Arguments) => note.(argv.user, argv.title, argv.body, argv.color),
+});
 
 yargs.command({
   command: 'remove',

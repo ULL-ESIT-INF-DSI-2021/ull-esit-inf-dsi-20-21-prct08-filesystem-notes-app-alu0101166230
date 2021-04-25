@@ -29,6 +29,22 @@ export function addNote(userName: string, titleNote: string, bodyNote:string, co
   }
 }
 
+export function modifyNote(userName: string, titleNote: string, bodyNote:string, color:string) {
+  const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
+  const fullUserDirectoryPath = NOTES_STORAGE_DIRECTORY + userName;
+  if (!fs.existsSync(fullNotePath) ) {
+    console.log("Error, note does not exist");
+  } else {
+    const note: Note = {
+      user: userName,
+      title: titleNote,
+      body: bodyNote,
+      color: color,
+    };
+    fs.writeFileSync(fullNotePath, JSON.stringify(note, null, 2));
+  }
+}
+
 export function removeNote(userName: string, titleNote: string) {
   const fullNotePath = NOTES_STORAGE_DIRECTORY + userName + '/' + titleNote;
   const fullUserDirectoryPath = NOTES_STORAGE_DIRECTORY + userName;
