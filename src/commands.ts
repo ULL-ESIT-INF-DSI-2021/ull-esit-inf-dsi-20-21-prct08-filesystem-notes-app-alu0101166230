@@ -99,5 +99,17 @@ yargs.command({
   handler: (argv:Arguments) => note.readNote(argv.user, argv.title),
 });
 
+yargs.command({
+  command: 'list',
+  describe: 'List All the files in the user directory',
+  builder: {
+    user: {
+      describe: 'Note Owner',
+      demandOption: true,
+      type: 'string',
+    },
+  },
+  handler: (argv:Arguments) => note.listNotes(argv.user),
+});
 
 yargs.parse();
