@@ -82,6 +82,7 @@ add --user Leonardo --title MyNote --body thisIsMyContent --color red
 Si existe, esta es la salida
 
  Se crea una carpeta con el usuario y la nota dentro
+ 
  ![test](img/Screenshot%20from%202021-04-25%2022-38-07.png)
 
  ![test](img/Screenshot%20from%202021-04-25%2022-53-17.png)
@@ -102,6 +103,7 @@ Si Existe la note:
  ![test](img/Screenshot%20from%202021-04-25%2022-42-27.png)
 
 Efectivamente se cambia
+
   ![test](img/Screenshot%20from%202021-04-25%2022-42-44.png)
 
 Si no existe
@@ -122,6 +124,8 @@ En caso de que no exista
 4. **List Notes**
 
 Dado un usuario con notas
+
+
 ![test](img/Screenshot%20from%202021-04-25%2022-45-35.png)
 
 ![test](img/Screenshot%20from%202021-04-25%2022-45-58.png)
@@ -129,6 +133,7 @@ Dado un usuario con notas
 Se muestra efectivamente por su `--color`
 
 En caso de que no exista, se muestra el siguiente mensaje
+
 
 ![test](img/Screenshot%20from%202021-04-25%2022-46-25.png)
 
